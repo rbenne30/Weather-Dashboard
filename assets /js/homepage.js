@@ -9,6 +9,17 @@ console.log(data);
  var searchBtn = document.getElementById("startbtn")
  console.log(searchBtn)
  searchBtn.addEventListener("click", searchBtn);
+
+ var userFormEl = document.querySelector("#user-form");
+ var nameInputEl = document.querySelector("#username");
+
+var formSubmitHandler = function(event){
+   event.preventDefault();
+   console.log(event);
+}
+
+
+userFormEl.addEventListener("submit", formSubmitHandler);
     // //fetch().then(function(response) {
     //     response.json(). then(function(data) 
     //     console.log(response);
