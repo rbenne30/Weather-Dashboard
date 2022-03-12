@@ -1,4 +1,4 @@
-var url = "https://api.openweathermap.org/data/2.5/weather?q=city&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial"
+var url = "https://api.openweathermap.org/data/2.5/weather?q=New york&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial"
  fetch(url).then(function(response){
 console.log(response);
 return response.json()
@@ -6,7 +6,13 @@ return response.json()
  .then(function(){
 console.log(data);
  })
-
+var displayRepos = function(repos, searchTerm) {
+   console.log(repos);
+   console.log(searchTerm);
+};
+   response.json().then(function(data){
+displayRepos(data, user);
+});
 //  var makeHTML = function(json)
 //  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
  var searchBtn = document.getElementById("startbtn")
