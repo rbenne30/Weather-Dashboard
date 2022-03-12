@@ -1,40 +1,39 @@
-var url = "https://api.openweathermap.org/data/2.5/weather?q=New york&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial"
- fetch(url).then(function(response){
-console.log(response);
-return response.json()
- })
- .then(function(){
-console.log(data);
- })
-var displayRepos = function(repos, searchTerm) {
-   console.log(repos);
-   console.log(searchTerm);
+var url =
+  "https://api.openweathermap.org/data/2.5/weather?q=miami&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial";
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+var displayRepos = function (repos, searchTerm) {
+  console.log(repos);
+  console.log(searchTerm);
 };
-   response.json().then(function(data){
-displayRepos(data, user);
-});
-//  var makeHTML = function(json)
-//  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
- var searchBtn = document.getElementById("startbtn")
- console.log(searchBtn)
- searchBtn.addEventListener("click", searchBtn);
+// response.json().then(function (data) {
+//   displayRepos(data, user);
+// });
+//  var makeHTML = function(json)
+//  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
+var searchBtn = document.getElementById("startbtn");
+console.log(searchBtn);
+searchBtn.addEventListener("click", searchBtn);
 
-
-var formSubmitHandler = function(event){
-   event.preventDefault();
-   console.log("hello");
-}
-
+var formSubmitHandler = function (event) {
+  event.preventDefault();
+  console.log("hello");
+};
 
 searchBtn.addEventListener("click", formSubmitHandler);
-    // //fetch().then(function(response) {
-    //     response.json(). then(function(data) 
-    //     console.log(response);
-    //     return response.json();
-    // })
-    // .then(function(data) {
-    //     //do something with the json data
-    //     console.log(data);
-    // });
-   // var makeHTML = function(json)
-//  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
+// //fetch().then(function(response) {
+//     response.json(). then(function(data)
+//     console.log(response);
+//     return response.json();
+// })
+// .then(function(data) {
+//     //do something with the json data
+//     console.log(data);
+// });
+// var makeHTML = function(json)
+//  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
+
+
+
