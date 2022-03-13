@@ -6,7 +6,7 @@ var url =
 var searchButton = $(".searchButton");
 var apiKey = "750fd3564acf9a5eea60e2988ce03a06";
 
-for (var i = 0: i <localStorage.length; i++) {
+for (var i = 0; i <localStorage.length; i++) {
     var city = localStorage.getItem("City");
     var cityName = $(".list-group"). addclass("list-group-item");
 
