@@ -28,7 +28,7 @@ getapi(api_url);
 
 //Function to hide that loader
 function hideloader(){
-    document.getElementById('loading').style.display = 'none';   
+    document.getElementById('startbtn').style.display = 'none';   
 }
 
 //response.json().then(function (data) {
