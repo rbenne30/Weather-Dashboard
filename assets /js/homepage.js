@@ -1,13 +1,17 @@
 var url =
   "https://api.openweathermap.org/data/2.5/weather?q=miami&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial";
-fetch(url)
+ fetch(url)
   .then((response) => response.json())
   .then((data) => console.log(data));
+var searchButton = $(".searchButton");
+var apiKey = "750fd3564acf9a5eea60e2988ce03a06";
 
-var displayRepos = function (repos, searchTerm) {
-  console.log(repos);
-  console.log(searchTerm);
-};
+for (var i = 0: i <l ocalStorage.length; i++) {
+    var city = localStorage.getItem("City"));
+    var cityName = $(".list-group"). addclass("list-group-item");
+
+    cityName.append("<li>"+ city + "</li>");
+}
 const api_url = "https://api.openweathermap.org/data/2.5/weather?q=miami&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial";
 
 //defining async function
@@ -20,7 +24,7 @@ async function getapi(url) {
     if (response) {
         hideloader();
     }
-    show(data);
+
     
 }
 //calling that async function
@@ -28,7 +32,7 @@ getapi(api_url);
 
 //Function to hide that loader
 function hideloader(){
-    document.getElementById('startbtn').style.display = 'none';   
+    document.getElementById('').style.display = 'none';   
 }
 
 //response.json().then(function (data) {
@@ -36,9 +40,9 @@ function hideloader(){
 // });
 //  var makeHTML = function(json)
 //  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
-var searchBtn = document.getElementById("startbtn");
-console.log(searchBtn);
-searchBtn.addEventListener("click", searchBtn);
+var SearchCity = document.getElementById("card");
+console.log(SearchCity);
+Button.addEventListener("click", SearchCity);
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
