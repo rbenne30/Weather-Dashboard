@@ -8,7 +8,30 @@ var displayRepos = function (repos, searchTerm) {
   console.log(repos);
   console.log(searchTerm);
 };
-// response.json().then(function (data) {
+const api_url = "https://api.openweathermap.org/data/2.5/weather?q=miami&appid=750fd3564acf9a5eea60e2988ce03a06&units=imperial";
+
+//defining async function
+async function getapi(url) {
+    //storing response
+    const response = await fetch(url);
+    //storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+        hideloader();
+    }
+    show(data);
+    
+}
+//calling that async function
+getapi(api_url);
+
+//Function to hide that loader
+function hideloader(){
+    document.getElementById('loading').style.display = 'none';   
+}
+
+//response.json().then(function (data) {
 //   displayRepos(data, user);
 // });
 //  var makeHTML = function(json)
