@@ -31,8 +31,8 @@ async function getapi(url) {
 getapi(api_url);
 
 //Function to hide that loader
-function hideloader(){
-    document.getElementById('').style.display = 'none';   
+ function hideloader(){
+     document.getElementById('').style.display = 'none';   
 }
 
 //response.json().then(function (data) {
@@ -42,7 +42,7 @@ function hideloader(){
 //  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
 var SearchCity = document.getElementById("card");
 console.log(SearchCity);
-Button.addEventListener("click", SearchCity);
+btn.addEventListener("click", SearchCity);
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
