@@ -22,28 +22,38 @@ async function getapi(city) {
     let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=750fd3564acf9a5eea60e2988ce03a06`
 
     //storing response
-    const response = await fetch(url);
+    const response1 = await fetch(url);
     //storing data in form of JSON
-    var data = await response.json();
-    var { lat, lon } = data[0];
+    var data1 = await response1.json();
+    var { lat, lon } = data1[0];
+    console.log(lat, lon)
+    console.log(data1)
 
     let url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=750fd3564acf9a5eea60e2988ce03a06`
 
-     const response2  =  await fetch(url2);
-     var data = await response2.json();
-    console.log(data);
+    const response2 = await fetch(url2);
+    var data2 = await response2.json();
+    console.log(data2);
+    const { temp, humidity, uvi, wind_speed } = data2.current
+    console.log(temp,humidity, wind_speed, uvi)
+
+
+
     // if (response) {
     //     hideloader();
     // }
 
-    
+
 }
+var test =document.getElementById("test")
+test.textContent="hello"
+console.log(test)
 //calling that async function
 // getapi('miami');
 
 //Function to hide that loader
 //  function hideloader(){
-    //  document.getElementById('').style.display = 'none';   
+//  document.getElementById('').style.display = 'none';   
 // }
 
 //response.json().then(function (data) {
@@ -51,13 +61,12 @@ async function getapi(city) {
 // });
 //  var makeHTML = function(json)
 //  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
-var SearchCity = document.getElementById("card");
-console.log(SearchCity);
+
 // document.querySelector('button').addEventListener("click", SearchCity);
 
 var formSubmitHandler = function (event) {
-  event.preventDefault();
-  console.log("hello");
+    event.preventDefault();
+    console.log("hello");
 };
 
 document.querySelector('button').addEventListener("click", handleClick);
